@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://dhc4uciegq5ul"]
+
+[ext_resource type="PackedScene" uid="uid://cve6dc5bugqx8" path="res://setting.tscn" id="1_35e3r"]
+[ext_resource type="PackedScene" uid="uid://bcg1a87s5vtpx" path="res://tiles.tscn" id="2_84i7x"]
+[ext_resource type="PackedScene" uid="uid://c0y6wb51o8jrt" path="res://dog.tscn" id="3_qutfe"]
+[ext_resource type="PackedScene" uid="uid://dlg5f3joqoh2y" path="res://trap.tscn" id="4_day1r"]
+[ext_resource type="PackedScene" uid="uid://cgdlogtcwhhwp" path="res://collectable.tscn" id="5_41wsh"]
+[ext_resource type="PackedScene" uid="uid://n15s17p0w5xb" path="res://finish.tscn" id="6_f3uuv"]
+
+[node name="run level" type="Node2D"]
+
+[node name="setting" parent="." instance=ExtResource("1_35e3r")]
+position = Vector2(-2, -2)
+
+[node name="Tiles" parent="." instance=ExtResource("2_84i7x")]
+position = Vector2(-5, 244)
+scale = Vector2(1.5, 1.5)
+
+[node name="Dog" parent="." instance=ExtResource("3_qutfe")]
+position = Vector2(47, 313)
+scale = Vector2(1.5, 1.5)
+
+[node name="Trap" parent="." instance=ExtResource("4_day1r")]
+position = Vector2(-1, 55)
+
+[node name="Spawn1" type="Marker2D" parent="Trap"]
+position = Vector2(-67, 287)
+
+[node name="Collectable" parent="." instance=ExtResource("5_41wsh")]
+position = Vector2(259, 354)
+scale = Vector2(2, 2)
+
+[node name="Collectable2" parent="." instance=ExtResource("5_41wsh")]
+position = Vector2(1046, 430)
+scale = Vector2(2, 2)
+
+[node name="Collectable3" parent="." instance=ExtResource("5_41wsh")]
+position = Vector2(1517, 404)
+scale = Vector2(2, 2)
+
+[node name="Collectable4" parent="." instance=ExtResource("5_41wsh")]
+position = Vector2(2674, 500)
+scale = Vector2(2, 2)
+
+[node name="Finish" parent="." instance=ExtResource("6_f3uuv")]
+position = Vector2(468, 424)
+scale = Vector2(3, 3)

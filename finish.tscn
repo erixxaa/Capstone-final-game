@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://n15s17p0w5xb"]
+
+[ext_resource type="Texture2D" uid="uid://d4hnoqmsjbati" path="res://Mini HouseLayer 1.png" id="1_0sxrp"]
+[ext_resource type="Script" path="res://Finish.gd" id="1_k6pxd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g0umm"]
+size = Vector2(12, 14)
+
+[node name="Finish" type="Sprite2D"]
+texture = ExtResource("1_0sxrp")
+script = ExtResource("1_k6pxd")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_g0umm")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

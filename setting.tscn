@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://cve6dc5bugqx8"]
+
+[ext_resource type="Texture2D" uid="uid://sr3eeqds43wo" path="res://settingLayer 1.png" id="1_hly1b"]
+[ext_resource type="Texture2D" uid="uid://dup680hre71j" path="res://plainLayer 1.png" id="2_afv0d"]
+
+[node name="setting" type="Node2D"]
+
+[node name="sky" type="Sprite2D" parent="."]
+position = Vector2(576, 318)
+scale = Vector2(0.6, 0.586111)
+texture = ExtResource("1_hly1b")
+
+[node name="sky5" type="Sprite2D" parent="."]
+position = Vector2(-576, 318)
+scale = Vector2(0.6, 0.586111)
+texture = ExtResource("1_hly1b")
+
+[node name="sky2" type="Sprite2D" parent="."]
+position = Vector2(1727, 317)
+scale = Vector2(0.6, 0.586111)
+texture = ExtResource("1_hly1b")
+
+[node name="sky3" type="Sprite2D" parent="."]
+position = Vector2(2876, 316)
+scale = Vector2(0.6, 0.586111)
+texture = ExtResource("1_hly1b")
+
+[node name="sky4" type="Sprite2D" parent="."]
+position = Vector2(4028, 315)
+scale = Vector2(0.6, 0.586111)
+texture = ExtResource("1_hly1b")
+
+[node name="sky6" type="Sprite2D" parent="."]
+position = Vector2(5180, 316)
+scale = Vector2(0.6, 0.586111)
+texture = ExtResource("1_hly1b")
+
+[node name="Plain" type="Sprite2D" parent="."]
+position = Vector2(2304, 1172)
+scale = Vector2(3.59583, 1)
+texture = ExtResource("2_afv0d")

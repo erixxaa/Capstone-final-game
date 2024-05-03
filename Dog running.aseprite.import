@@ -1,0 +1,18 @@
+[remap]
+
+importer="aseprite_wizard.plugin"
+type="PackedDataContainer"
+uid="uid://yv71iq5aa8oi"
+path="res://.godot/imported/Dog running.aseprite-956a0329002b477b9e597ff2210e995d.res"
+
+[deps]
+
+source_file="res://Dog running.aseprite"
+dest_files=["res://.godot/imported/Dog running.aseprite-956a0329002b477b9e597ff2210e995d.res"]
+
+[params]
+
+split_layers=false
+exclude_layers_pattern=""
+only_visible_layers=false
+sheet_type="Packed"

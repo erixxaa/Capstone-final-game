@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c43is573teud5"]
+
+[node name="Prompt" type="Node2D"]
+visible = false
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Press S"
