@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw4gkrpb64sxw"]
+
+[ext_resource type="Script" path="res://Dog bed.gd" id="1_gti8b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ui25h"]
+
+[node name="Sprite2D" type="Sprite2D"]
+scale = Vector2(9.12, 5)
+script = ExtResource("1_gti8b")
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(1, 1.02577)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_ui25h")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

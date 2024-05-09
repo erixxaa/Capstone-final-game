@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://vfpmb4ufcaoe"]
+
+[ext_resource type="Texture2D" uid="uid://ocmdkioidy02" path="res://real dog.jpg" id="1_53a5c"]
+[ext_resource type="Script" path="res://real_dog.gd" id="1_xt5u2"]
+
+[node name="Real dog" type="Node2D"]
+position = Vector2(46, -8)
+script = ExtResource("1_xt5u2")
+
+[node name="RealDog" type="Sprite2D" parent="."]
+position = Vector2(566, 319)
+texture = ExtResource("1_53a5c")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = -22.0
+offset_top = 478.0
+offset_right = 94.0
+offset_bottom = 518.0
+scale = Vector2(4, 4)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Turn on lamp" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Turn on Lamp"
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0.0235294, 0, 0.333333, 1)
+shadow_enabled = true
+shadow_color = Color(0.32549, 0, 0, 0)
+height = 0.39
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Turn on lamp" to="." method="_on_continue_pressed"]

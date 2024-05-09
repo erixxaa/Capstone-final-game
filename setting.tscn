@@ -35,7 +35,12 @@ position = Vector2(5180, 316)
 scale = Vector2(0.6, 0.586111)
 texture = ExtResource("1_hly1b")
 
+[node name="sky7" type="Sprite2D" parent="."]
+position = Vector2(6331, 316)
+scale = Vector2(0.6, 0.586111)
+texture = ExtResource("1_hly1b")
+
 [node name="Plain" type="Sprite2D" parent="."]
-position = Vector2(2304, 1172)
-scale = Vector2(3.59583, 1)
+position = Vector2(2881, 1159)
+scale = Vector2(4.19687, 1)
 texture = ExtResource("2_afv0d")

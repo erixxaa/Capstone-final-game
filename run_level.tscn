@@ -28,7 +28,7 @@ position = Vector2(-67, 287)
 
 [node name="Collectable" parent="." instance=ExtResource("5_41wsh")]
 position = Vector2(259, 354)
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 
 [node name="Collectable2" parent="." instance=ExtResource("5_41wsh")]
 position = Vector2(1046, 430)
@@ -39,9 +39,17 @@ position = Vector2(1517, 404)
 scale = Vector2(2, 2)
 
 [node name="Collectable4" parent="." instance=ExtResource("5_41wsh")]
-position = Vector2(2674, 500)
+position = Vector2(2691, 464)
+scale = Vector2(2, 2)
+
+[node name="Collectable5" parent="." instance=ExtResource("5_41wsh")]
+position = Vector2(4779, 616)
+scale = Vector2(2, 2)
+
+[node name="Collectable6" parent="." instance=ExtResource("5_41wsh")]
+position = Vector2(5271, 787)
 scale = Vector2(2, 2)
 
 [node name="Finish" parent="." instance=ExtResource("6_f3uuv")]
-position = Vector2(468, 424)
-scale = Vector2(3, 3)
+position = Vector2(5725, 845)
+scale = Vector2(4, 4)

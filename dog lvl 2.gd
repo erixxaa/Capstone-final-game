@@ -36,6 +36,12 @@ func _physics_process(delta):
 		velocity.y = SPEED
 	else:
 		velocity = Vector2(0 , 0)
+		animation_player.play("idle")
 	#$Animation.play("ui_right")
+	
+	if alive:
+		if is_on_floor():
+				animation_player.play("ui_right")
+	
 	
 	move_and_slide()

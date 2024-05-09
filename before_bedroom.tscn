@@ -1,0 +1,105 @@
+[gd_scene load_steps=12 format=3 uid="uid://cl81hyi6dwmde"]
+
+[ext_resource type="Texture2D" uid="uid://c217h06t7je5p" path="res://plain room.png" id="1_86f5b"]
+[ext_resource type="Script" path="res://before_bedroom.gd" id="1_jhpdo"]
+[ext_resource type="Texture2D" uid="uid://dl0nqqhir1q8p" path="res://dog outlines.png" id="2_n0hl7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqs4e"]
+atlas = ExtResource("2_n0hl7")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3ryo"]
+atlas = ExtResource("2_n0hl7")
+region = Rect2(768, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wat4s"]
+atlas = ExtResource("2_n0hl7")
+region = Rect2(480, 96, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kxr4c"]
+atlas = ExtResource("2_n0hl7")
+region = Rect2(192, 96, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1cac0"]
+atlas = ExtResource("2_n0hl7")
+region = Rect2(480, 192, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5pglg"]
+atlas = ExtResource("2_n0hl7")
+region = Rect2(768, 96, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_07jbg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqs4e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3ryo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wat4s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kxr4c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1cac0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5pglg")
+}],
+"loop": true,
+"name": &"sleep",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mys2o"]
+
+[node name="before bedroom" type="Node2D"]
+position = Vector2(-10, -27)
+script = ExtResource("1_jhpdo")
+
+[node name="PlainRoom" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(646, 138)
+texture = ExtResource("1_86f5b")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(581, 535)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_07jbg")
+animation = &"sleep"
+autoplay = "sleep"
+frame_progress = 0.234341
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(573, 555)
+scale = Vector2(-4.71691, 4.08)
+shape = SubResource("CircleShape2D_mys2o")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(559, 506)
+zoom = Vector2(3, 3)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 441.0
+offset_top = 488.0
+offset_right = 517.0
+offset_bottom = 528.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Wake up"
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+scale = Vector2(0.988673, 1)
+color = Color(0.329412, 0.223529, 0.270588, 1)
+blend_mode = 1
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
